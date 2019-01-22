@@ -1,0 +1,165 @@
+*:before, *:after, * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.main-wrapper {
+	background: url("https://images.unsplash.com/photo-1493662042295-319935c83112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80") no-repeat center center fixed;
+}
+
+.main-content {     
+	display: grid;    
+	grid-template-columns: minmax(320px, 1fr) 4fr 1fr;
+	grid-template-rows: 10vh repeat(4, 1fr) 10vh;
+	height: 100vh;
+	width: 100vw;
+	color: #eee;
+	animation-name: opacity-slide;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	padding: 10px;
+}
+
+@keyframes opacity-slide {
+  0% {background-color: white;}
+  10% {background-color: rgba(0,0,0, .1);}
+  100% {background-color: rgba(0,0,0, .5);}
+}
+
+
+/*----SPLASH GREETING---*/
+
+.splash-greeting {
+	grid-column: 2 / 3;
+	grid-row: 2 / 7;
+	justify-self: center;
+	align-self: center;
+	width: 30vw;
+	height: auto;
+}
+
+.splash-greeting > h1, h2 {
+	color:;
+	text-align: center;
+}
+
+.splash-greeting h1 {
+	font-size: 180px;
+}
+
+.splash-greeting h2 {
+	font-size: 40px;
+}
+
+
+
+/*----TOP UTILITIES----*/
+
+.top-utilities {
+	grid-column: 1 / 4;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-utilities > div {
+	width: 200px;
+	border: 1px solid red;
+/*	align-self: center;*/
+}
+
+.top-utilities .temperature {
+
+}
+
+.top-utilities .search-bar {
+	border: 1px solid #ccc;
+	align-self: center;
+	width: auto;
+	padding: 10px 70px 10px 20px;
+	width: auto;
+}
+
+.top-utilities .search-bar input {
+	padding: 4px 55px 4px 0px;
+}
+
+.top-utilities .search-bar button {
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.ui-close {
+	visibility: hidden;
+	float: right;
+	cursor: pointer;
+}
+
+/*----SIDE NAV---*/
+
+.navigation {
+	grid-column: 1 / 2;
+	grid-row: 2 / 6;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #eee;
+/*	background: rgba(0,0,0,0.5);*/
+}
+
+.navigation> ul li {
+	font-weight: bold;
+}
+
+.navigation > ul li a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	height: 2rem;
+	width: auto;
+	border: 1px solid #ccc;
+	color: #eee;
+}
+
+.navigation a:hover {
+	transition: .2s ease-in-out;
+	color: white;
+	background: rgba(100, 100, 100, .4);
+}
+
+.navigation i {
+	text-align: center;
+	color: #ccc;
+}
+
+.navigation i:hover {
+	transition: .2s;
+	color: white;
+}
+
+/*----DIZZY ICON---*/
+
+.dizzy-face {
+	border-radius: 50%;
+	grid-row: 5 / 6;
+	grid-column: 1 / 2;
+	justify-self: center;
+	align-self: center;
+	color: #ccc;
+}
+
+.dizzy-face a {
+	color: #ccc;
+}
+
+.dizzy-face a:hover {
+	transition: .2s ease-in-out;
+	color: white;
+}
+
+/*----BACKGROUND IMG INFO---*/
+
+.background-info {
+	grid-column: 1 / 2;
+	grid-row: 6 / 7;
+}
